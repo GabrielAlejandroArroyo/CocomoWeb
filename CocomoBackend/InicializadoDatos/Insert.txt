@@ -1,0 +1,50 @@
+
+INSERT INTO [cocomo].[dbo].[CocomoHeads]
+           ([Code]
+           ,[Description]
+           ,[IdCustomer]
+           ,[IdTypeRequirement]
+           ,[IdTypeComplexity]
+           ,[IdCocomostate]
+           ,[EstimationDate]
+           ,[EstimationObservations]
+           ,[IdModule]
+           ,[IdVertical]
+           ,[RevisionDate]
+           ,[IdOwner]
+           ,[IdRevisor]
+           ,[ActiveEstimation]
+           ,[ActiveCaim]
+           ,[CreationDate]
+           ,[ModificationDate])
+VALUES
+-- Registro 1
+(1001, 'Description 1', 1, 1, 1, 1, '2024-09-25', 'Observations 1', 1, 1, '2024-09-25', 1, 1, 1, 1, '2024-09-25', '2024-09-25'),
+-- Registro 2
+(1002, 'Description 2', 1, 1, 1, 1, '2024-09-25', 'Observations 2', 1, 1, '2024-09-25', 1, 1, 1, 1, '2024-09-25', '2024-09-25'),
+-- Registro 3
+(1003, 'Description 3', 1, 1, 1, 1, '2024-09-25', 'Observations 3', 1, 1, '2024-09-25', 1, 1, 1, 1, '2024-09-25', '2024-09-25'),
+-- Registro 4
+(1004, 'Description 4', 1, 1, 1, 1, '2024-09-25', 'Observations 4', 1, 1, '2024-09-25', 1, 1, 1, 1, '2024-09-25', '2024-09-25'),
+-- Registro 5
+(1005, 'Description 5', 1, 1, 1, 1, '2024-09-25', 'Observations 5', 1, 1, '2024-09-25', 1, 1, 1, 1, '2024-09-25', '2024-09-25'),
+-- Registro 6
+(1006, 'Description 6', 1, 1, 1, 1, '2024-09-25', 'Observations 6', 1, 1, '2024-09-25', 1, 1, 1, 1, '2024-09-25', '2024-09-25'),
+-- Registro 7
+(1007, 'Description 7', 1, 1, 1, 1, '2024-09-25', 'Observations 7', 1, 1, '2024-09-25', 1, 1, 1, 1, '2024-09-25', '2024-09-25'),
+-- Registro 8
+(1008, 'Description 8', 1, 1, 1, 1, '2024-09-25', 'Observations 8', 1, 1, '2024-09-25', 1, 1, 1, 1, '2024-09-25', '2024-09-25'),
+-- Registro 9
+(1009, 'Description 9', 1, 1, 1, 1, '2024-09-25', 'Observations 9', 1, 1, '2024-09-25', 1, 1, 1, 1, '2024-09-25', '2024-09-25'),
+-- Registro 10
+(1010, 'Description 10', 1, 1, 1, 1, '2024-09-25', 'Observations 10', 1, 1, '2024-09-25', 1, 1, 1, 1, '2024-09-25', '2024-09-25'),
+-- Registro 11
+(1011, 'Description 11', 1, 1, 1, 1, '2024-09-25', 'Observations 11', 1, 1, '2024-09-25', 1, 1, 1, 1, '2024-09-25', '2024-09-25'),
+-- Registro 12
+(1012, 'Description 12', 1, 1, 1, 1, '2024-09-25', 'Observations 12', 1, 1, '2024-09-25', 1, 1, 1, 1, '2024-09-25', '2024-09-25'),
+-- Registro 13
+(1013, 'Description 13', 1, 1, 1, 1, '2024-09-25', 'Observations 13', 1, 1, '2024-09-25', 1, 1, 1, 1, '2024-09-25', '2024-09-25'),
+-- Registro 14
+(1014, 'Description 14', 1, 1, 1, 1, '2024-09-25', 'Observations 14', 1, 1, '2024-09-25', 1, 1, 1, 1, '2024-09-25', '2024-09-25'),
+-- Registro 15
+(1015, 'Description 15', 1, 1, 1, 1, '2024-09-25', 'Observations 15', 1, 1, '2024-09-25', 1, 1, 1, 1, '2024-09-25', '2024-09-25');
