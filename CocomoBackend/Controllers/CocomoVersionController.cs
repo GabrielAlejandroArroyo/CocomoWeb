@@ -10,9 +10,9 @@ namespace CocomoBackend.Controllers
     [ApiController]
     public class CocomoVersionController : ControllerBase
     {
-        private readonly ICocomoVersionServices _cocomoVersionService;
+        private readonly ICocomoVersionService _cocomoVersionService;
 
-        public CocomoVersionController(ICocomoVersionServices cocomoVersionService)
+        public CocomoVersionController(ICocomoVersionService cocomoVersionService)
         {
             _cocomoVersionService = cocomoVersionService;
         }

@@ -32,7 +32,7 @@ namespace CocomoBackend.Controllers
             {
                 var newCocomo = await _cocomoService.CreateCocomoAsync(cocomoHeadDto);
                 //return CreatedAtAction(nameof(GetCocomoHead), new { id = newCocomoHead.Id }, newCocomoHead);
-                return null;
+                return newCocomo;
             }
             catch (DbUpdateException ex)
             {

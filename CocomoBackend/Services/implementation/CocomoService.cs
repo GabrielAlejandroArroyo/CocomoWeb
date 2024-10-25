@@ -11,11 +11,12 @@ namespace CocomoBackend.Services.implementation
     public class CocomoService : ICocomoService
     {
         private readonly AppDbContext _context;
-        private readonly CocomoHeadService _headService;
-        private readonly CocomoVersionService _versionService;
+        private readonly ICocomoHeadService _headService;
+        private readonly ICocomoVersionService _versionService;
         private readonly IMapper _mapper;
 
-        public CocomoService(AppDbContext context, CocomoHeadService headService, CocomoVersionService versionService, IMapper mapper)
+        //public CocomoService(AppDbContext context, CocomoHeadService headService, CocomoVersionService versionService, IMapper mapper)
+        public CocomoService(AppDbContext context, ICocomoHeadService headService, ICocomoVersionService versionService, IMapper mapper)
         {
             _context = context;
             _headService = headService;
@@ -32,20 +33,21 @@ namespace CocomoBackend.Services.implementation
                 {
 
                     var head = await _headService.CreateCocomoHeadAsync(cocomoHeadlDTO);
-                    CocomoVersionCreateDTO newVersionDTO = new CocomoVersionCreateDTO();
-                    newVersionDTO.IdCocomoHead = head.Id;
-                    newVersionDTO.Version = "1";
-                    newVersionDTO.IdCocomoStateVersion = 1;
+                    
+                    //CocomoVersionCreateDTO newVersionDTO = new CocomoVersionCreateDTO();
+                    //newVersionDTO.IdCocomoHead = head.Id;
+                    //newVersionDTO.Version = "1";
+                    //newVersionDTO.IdCocomoStateVersion = 1;
 
 
-                    var version = await _versionService.CreateCocomoVersionAsync(newVersionDTO);
+                    //var version = await _versionService.CreateCocomoVersionAsync(newVersionDTO);
 
 
                     await transaccion.CommitAsync();
 
                     CocomoReadDTO cocomoReadDTO = new CocomoReadDTO();
                     cocomoReadDTO.CocomoHead = head;
-                    cocomoReadDTO.CocomoVersion = version;
+                    //cocomoReadDTO.CocomoVersion = version;
                     return cocomoReadDTO;
                 }
                 catch (Exception ex)

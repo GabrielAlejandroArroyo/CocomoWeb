@@ -8,7 +8,7 @@ using CocomoBackend.Services.interfaces;
 //namespace Prospection.Seed.Services
 namespace CocomoBackend.Services.implementation
 {
-    public class CocomoVersionService : ICocomoVersionServices
+    public class CocomoVersionService : ICocomoVersionService
     {
         private readonly AppDbContext _context;
         private readonly IMapper _mapper;

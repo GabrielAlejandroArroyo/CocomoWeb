@@ -2,7 +2,7 @@
 
 namespace CocomoBackend.Services.interfaces
 {
-    public interface ICocomoVersionServices
+    public interface ICocomoVersionService
     {
         Task<IEnumerable<CocomoVersionReadDTO>> GetAllCocomoVersionsAsync();
         Task<CocomoVersionReadDTO> GetCocomoVersionByIdAsync(int id);

@@ -54,7 +54,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 // Mapeo por Servicio
 builder.Services.AddScoped<ICocomoHeadService, CocomoHeadService>();
-builder.Services.AddScoped<ICocomoVersionServices, CocomoVersionService>();
+builder.Services.AddScoped<ICocomoVersionService, CocomoVersionService>();
 builder.Services.AddScoped<ICocomoDetailService, CocomoDetailService>();
 
 builder.Services.AddScoped<ICocomoService, CocomoService>();
