@@ -12,8 +12,10 @@ namespace CocomoBackend.Models
         [Required]
         public int IdCocomoHead { get; set; }
 
-        [ForeignKey("IdCocomoHead")]
+        //[ForeignKey("IdCocomoHead")]
         public CocomoHead CocomoHead { get; set; }  // Navegación a CocomoHead
+
+
         public string Version { get; set; }
         public int IdCocomostateversion { get; set; }
         public CocomoStateVersion Cocomostateversion { get; set; }

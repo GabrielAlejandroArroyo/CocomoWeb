@@ -71,7 +71,22 @@ namespace CocomoBackend.Data
               .HasForeignKey(cs => cs.IdCocomostate)  // La clave foránea es IdCocomostate
               .OnDelete(DeleteBehavior.Restrict);  // Configura el comportamiento en cascada (opcional)
 
-            modelBuilder.Entity<CocomoVersion>();
+            modelBuilder.Entity<CocomoVersion>()
+                .HasOne(ch => ch.CocomoHead)  // CocomoHead tiene un Customer
+                .WithMany(ch => ch.CocomoVersions)  // Customer tiene muchas CocomoHeads
+                .HasForeignKey(ch => ch.IdCocomoHead)  // La clave foránea es IdCustomer
+                .OnDelete(DeleteBehavior.Restrict);
+
+
+            modelBuilder.Entity<CocomoVersion>()
+              .HasOne(cs => cs.Cocomostateversion)  // CocomoHead tiene un Cocomostate
+              .WithMany(cs => cs.CocomoVersions)  // Cocomostate tiene muchas CocomoHeads
+              .HasForeignKey(cs => cs.IdCocomostateversion)  // La clave foránea es IdCocomostate
+              .OnDelete(DeleteBehavior.Restrict);  // Configura el comportamiento en cascada (opcional)
+
+
+
+            // Configura el comportamiento en cascada (opcional)
             //  .HasOne(csv => csv.Cocomostateversion)  // CocomoVersions tiene un Cocomostateversion
             //  .WithMany(csv => csv.CocomoVersions)  // Cocomostateversion tiene muchas CocomoVersion
             //  .HasForeignKey(csv => csv.IdCocomostateversion)  // La clave foránea es IdCocomostateversion
@@ -83,7 +98,7 @@ namespace CocomoBackend.Data
             //.HasForeignKey(csv => csv.IdCocomoDetail) // La clave foránea es IdCocomoDetail
             //.OnDelete(DeleteBehavior.Restrict);  // Configura el comportamiento en cascada (opcional)
 
-            
+
             //modelBuilder.Entity<CocomoVersion>()
             //.HasOne(cv => cv.CocomoRequeriment)  // CocomoVersion tiene un CocomoRequeriment
             //.WithOne(cr => cr.CocomoVersions)      // CocomoRequeriment un CocomoVersion
